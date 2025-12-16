@@ -1,0 +1,124 @@
+/* секция 1 */
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  /* width: 150vh; */
+}
+
+#headline {
+  width: 100vw;
+  height: 300px;
+  z-index: -2;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+h1 {
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 230px;
+  width: 100%;
+}
+
+.green-panels {
+  display: flex;
+  gap: 37%;
+  width: 100%;
+  justify-content: center;
+  z-index: -1;
+
+  animation: up-and-down 3s linear alternate infinite;
+}
+
+.green-panels img {
+  width: 19%;
+}
+
+#big-beetle {
+  width: 83%;
+  margin-top: -20%;
+  margin-bottom: -30%;
+}
+
+#tools {
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+}
+
+#tools img:nth-of-type(1) {
+  width: 43%;
+  animation: up-and-down 4s ease-in-out alternate infinite;
+}
+
+#tools img:nth-of-type(2) {
+  width: 32%;
+  animation: up-and-down 4s ease-in-out alternate infinite;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+
+/* бегущая строка "автосервис для жуков" */
+.container {
+  display: flex;
+  padding-top: 15%;
+}
+
+.left,
+.right {
+  width: 50vw;
+  font-size: 9vw;
+  font-weight: 600;
+  overflow: hidden;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.left {
+  transform-origin: right;
+  transform: skewY(30deg);
+}
+
+.right {
+  transform-origin: left;
+  transform: skewY(-30deg);
+}
+
+.left span {
+  position: relative;
+  animation: running-line-left 7s linear infinite;
+}
+
+.right span {
+  position: relative;
+  animation: running-line-right 7s linear infinite;
+}
+
+@keyframes running-line-left {
+  0% {
+    margin-left: 200%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@keyframes running-line-right {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: -400%;
+  }
+}

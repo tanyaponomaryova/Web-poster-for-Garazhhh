@@ -1,0 +1,221 @@
+* {
+  cursor: url(../images/cursor.svg) 2 2, auto;
+}
+
+/* цвета */
+:root {
+  --text-color: #ff7fd1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: rgb(255, 255, 255);
+  font-family: "Bounded";
+
+  width: 100vw;
+  height: 3300px;
+}
+
+body::before {
+  content: "";
+  background-image: url(../images/maket1.png);
+  width: 100vw;
+  height: 3300px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  opacity: 0.2;
+  z-index: -100;
+}
+
+/* 1 + 2 FLEX */
+.start-cone-flex {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* секция 2 */
+.section-2 {
+  width: 50vw;
+  height: fit-content;
+  align-self: flex-start;
+
+  background-color: rgba(0, 255, 123, 0.2);
+
+  position: relative;
+}
+
+.section-2 div:nth-of-type(1) {
+  height: fit-content;
+}
+
+#road-1 {
+  position: absolute;
+  right: 0;
+  z-index: -4;
+  width: 133%;
+}
+
+#gate-1 {
+  width: 25%;
+  padding-left: 7%;
+  padding-top: 10%;
+}
+
+.flags-countdown {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  gap: 4%;
+
+  margin-top: -50%;
+}
+
+/* второй флаг */
+.flags-countdown div:nth-of-type(3) {
+  margin-left: -3%;
+  align-self: flex-end;
+}
+
+.flag {
+  width: 7%;
+  height: fit-content;
+}
+
+.flag img {
+  width: 100%;
+  transform-origin: bottom;
+  animation: flag-wave 2s linear infinite;
+}
+
+@keyframes flag-wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.countdown {
+  width: 40%;
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.countdown img {
+  width: 100%;
+}
+
+.countdown::after {
+  font-size: 8vw;
+  color: white;
+  font-family: "Bounded";
+  font-weight: 900;
+
+  content: "GO";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-54%, -50%) skewY(30deg) scaleX(0.866);
+
+  animation: countdown-animation 4s linear infinite;
+}
+
+@keyframes countdown-animation {
+  0% {
+    content: "3";
+  }
+  25% {
+    content: "2";
+  }
+  50% {
+    content: "1";
+  }
+  75% {
+    content: "GO";
+  }
+}
+
+/* секция 3 */
+/* конус */
+
+.section-3 {
+  width: 55vw;
+  background-color: rgb(38, 0, 255, 0.3);
+  position: relative;
+
+  margin-left: -5vw;
+}
+
+/* надпись ГОНКА */
+h2 {
+  font-family: "Bounded";
+  font-size: 12vw;
+  font-weight: 800;
+  color: var(--text-color);
+  /* transform-origin: top; */
+  transform: skewY(-30deg) scaleX(0.866);
+
+  /* padding-left: 7%; */
+}
+
+.road-cone-container img {
+  width: 133%;
+  grid-area: 1 / 1;
+}
+
+.road-cone-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+
+  margin-top: -30%;
+}
+
+/* ЖУКИ БЕГУТ */
+
+.blue-beetle {
+  background-image: url(../images/section-2/blue-beetle.svg);
+  width: 10%;
+  aspect-ratio: 258 / 252;
+  background-size: auto 100%;
+
+  animation: run 0.5s steps(2) infinite;
+}
+
+.green-beetle {
+  background-image: url(../images/section-2/green-beetle.svg);
+  width: 10%;
+  aspect-ratio: 346 / 214;
+  background-size: auto 100%;
+
+  animation: run 0.5s steps(2) infinite;
+}
+
+.pink-beetle {
+  background-image: url(../images/section-2/pink-beetle.svg);
+  width: 10%;
+  aspect-ratio: 257 / 211;
+  background-size: auto 100%;
+
+  animation: run 0.5s steps(2) infinite;
+}
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
