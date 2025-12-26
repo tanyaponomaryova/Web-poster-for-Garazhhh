@@ -12,10 +12,15 @@
     <section class="section-1">
       <div id="headline">
         <h1>гаражжж</h1>
+        <h1>гаражжж</h1>
       </div>
       <div class="green-panels">
-        <img src="images/section-1/left-platform.svg" alt="" />
-        <img src="images/section-1/right-platform.svg" alt="" />
+        <div id="left-panel">
+          <img src="images/section-1/left-panel.svg" alt="" />
+          <div id="slides"></div>
+        </div>
+
+        <img src="images/section-1/right-panel.svg" alt="" />
       </div>
       <img
         id="big-beetle"
@@ -38,13 +43,14 @@
       </div>
     </div>
 
+    <!-- флекс СТАРТ + КОНУС -->
     <div class="start-cone-flex">
       <!-- секция 2 -->
       <!-- СТАРТ -->
       <section class="section-2">
-        <div class="blue-beetle blue-beetle-section-1"></div>
-        <div class="green-beetle green-beetle-section-1"></div>
-        <div class="pink-beetle pink-beetle-section-1"></div>
+        <div class="blue-beetle blue-beetle-section-2"></div>
+        <div class="green-beetle green-beetle-section-2"></div>
+        <div class="pink-beetle pink-beetle-section-2"></div>
         <div>
           <img id="road-1" src="images/section-2/road-1.svg" alt="" />
           <img id="gate-1" src="images/section-2/gate.svg" alt="" />
@@ -59,7 +65,9 @@
           <div class="flag"></div>
         </div>
 
-        <h2 id="start-letters">СТАРТ</h2>
+        <h2 class="start-finish start">СТАРТ</h2>
+
+        <img class="fence" src="images/fence.svg" alt="" />
       </section>
       <!-- секция 3 -->
       <!-- КОНУС -->
@@ -69,14 +77,17 @@
           <img src="images/section-2/road-2.svg" alt="" />
           <img src="images/section-2/cone.svg" alt="" />
         </div>
-        <p>
+        <p class="comments">
           обогнуть <br />
           препятствие
         </p>
 
-        <div class="blue-beetle"></div>
-        <div class="green-beetle"></div>
-        <div class="pink-beetle"></div>
+        <div class="blue-beetle blue-beetle-section-3-forward"></div>
+        <div class="blue-beetle blue-beetle-section-3-backward"></div>
+        <div class="green-beetle green-beetle-section-3-forward"></div>
+        <div class="green-beetle green-beetle-section-3-backward"></div>
+        <div class="pink-beetle pink-beetle-section-3-forward"></div>
+        <div class="pink-beetle pink-beetle-section-3-backward"></div>
       </section>
     </div>
 
@@ -103,17 +114,61 @@
           </div>
         </div>
       </div>
+      <p class="comments">подземная <br />трасса</p>
+
+      <div class="blue-beetle blue-beetle-section-4"></div>
+      <div class="green-beetle green-beetle-section-4"></div>
+      <div class="pink-beetle pink-beetle-section-4"></div>
     </section>
 
     <!-- секция 5 -->
     <!-- ФИНИШ -->
     <section id="section-5">
-      <img src="images/section-2/road-4.svg" alt="" />
-      <img src="images/section-2/tube-2.svg" alt="" />
+      <div id="road-tube-container">
+        <img src="images/section-2/road-4.svg" alt="" />
+        <img src="images/section-2/tube-2.svg" alt="" />
+      </div>
+      <img id="gate-2" src="images/section-2/gate.svg" alt="" />
+      <div id="section-5-text-container">
+        <h2 class="start-finish finish">ФИНИШ</h2>
+        <p class="comments">жуки уже <br />на финишной <br />прямой</p>
+      </div>
+
+      <div class="blue-beetle blue-beetle-section-5"></div>
+      <div class="green-beetle green-beetle-section-5"></div>
+      <div class="pink-beetle pink-beetle-section-5"></div>
     </section>
 
-    <div class="blue-beetle"></div>
-    <div class="green-beetle"></div>
-    <div class="pink-beetle"></div>
+    <!-- секция 6 -->
+    <!-- КУБОК -->
+    <section id="section-6">
+      <!-- grid -->
+      <div>
+        <div id="numbers-trophy-container">
+          <img src="images/section-3/numbers.svg" alt="" />
+          <img src="images/section-3/trophy.svg" alt="" />
+        </div>
+        <div id="fences">
+          <img src="images/fence.svg" alt="" />
+          <img src="images/fence.svg" alt="" />
+        </div>
+        <img src="images/section-3/tiles.svg" alt="" />
+      </div>
+
+    <!-- бегущая строка -->
+    <div class="running-line-2">
+      <div class="left">
+        <span
+          >Пономарева Татьяна&nbsp;&nbsp;&nbsp;&nbsp; Группа:
+          БДЗ257&nbsp;&nbsp;&nbsp;&nbsp; Куратор: Сергей Гриднев</span
+        >
+      </div>
+      <div class="right">
+        <span
+          >Пономарева Татьяна&nbsp;&nbsp;&nbsp;&nbsp; Группа:
+          БДЗ257&nbsp;&nbsp;&nbsp;&nbsp; Куратор: Сергей Гриднев</span
+        >
+      </div>
+    </div>
   </body>
 </html>

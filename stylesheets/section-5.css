@@ -1,0 +1,172 @@
+/* секция 5 */
+/* ФИНИШ */
+#section-5 {
+  width: 100vw;
+  height: 90vw;
+  position: relative;
+  /* overflow: hidden; */
+  margin-top: -60%;
+}
+
+#road-tube-container {
+  display: grid;
+}
+
+#road-tube-container img {
+  grid-area: 1 / 1;
+  width: 100%;
+}
+
+#road-tube-container img:nth-of-type(2) {
+  z-index: 5;
+}
+
+#gate-2 {
+  width: 12.5%;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 47%;
+  left: 37%;
+}
+
+.finish {
+  transform-origin: right;
+  transform: rotate(-30deg) skewX(30deg);
+  margin-left: -3%;
+}
+
+#section-5-text-container {
+  display: flex;
+  position: absolute;
+  top: 55%;
+  gap: 40%;
+}
+
+#section-5-text-container p {
+  padding-left: 30%;
+  /* padding-top: 0%; */
+}
+
+.blue-beetle-section-5 {
+  width: 5%;
+  z-index: 4;
+  position: absolute;
+  top: 34%;
+  right: 10%;
+
+  animation: movement-bb-5 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+.green-beetle-section-5 {
+  width: 7.5%;
+  z-index: 4;
+  position: absolute;
+
+  top: 32%;
+  right: 10%;
+
+  animation: movement-gb-5 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+.pink-beetle-section-5 {
+  width: 5%;
+  z-index: 4;
+  position: absolute;
+
+  top: 31%;
+  right: 14%;
+
+  animation: movement-pb-5 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+/* анимация перемещения СИНИЙ 5*/
+@keyframes movement-bb-5 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(-1800%, 1060%) rotateY(180deg);
+  }
+}
+
+/* анимация перемещения ЗЕЛЁНЫЙ 5 */
+@keyframes movement-gb-5 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(-1800%, 1680%) rotateY(180deg);
+  }
+}
+
+/* анимация перемещения РОЗОВЫЙ 5*/
+@keyframes movement-pb-5 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(-1800%, 1260%) rotateY(180deg);
+  }
+}
+
+/* бегущая строка-2 */
+.running-line-2 {
+  display: flex;
+}
+
+.left-2,
+.right-2 {
+  width: 50vw;
+  font-size: 2vw;
+  font-weight: 800;
+  /* overflow: hidden; */
+  color: var(--text-color);
+}
+
+.left-2 div,
+.right-2 div {
+  white-space: pre;
+}
+
+.left-2 {
+  transform-origin: right;
+  transform: skewY(30deg);
+}
+
+.right-2 {
+  transform-origin: left;
+  transform: skewY(-30deg);
+}
+
+.left-2 div {
+  position: relative;
+  animation: running-line-left 10s linear infinite;
+}
+
+.right-2 div {
+  position: relative;
+  animation: running-line-right 10s linear infinite;
+}
+
+@keyframes running-line-left {
+  0% {
+    margin-left: 200%;
+  }
+
+  100% {
+    margin-left: -760%;
+  }
+}
+
+@keyframes running-line-right {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: -860%;
+  }
+}

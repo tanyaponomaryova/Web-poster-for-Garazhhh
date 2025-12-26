@@ -1,0 +1,83 @@
+#section-6 {
+  width: 90vw;
+  /* height: 100vw; */
+  position: relative;
+  /* overflow: hidden; */
+
+  margin-top: -35%;
+}
+
+#section-6 > :first-child {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+}
+
+#section-6 > :first-child > * {
+  grid-area: 1 / 1;
+}
+
+#numbers-trophy-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* цифры */
+#numbers-trophy-container img:nth-of-type(1) {
+  width: 54%;
+  padding-top: 10%;
+}
+
+/* кубок */
+#numbers-trophy-container img:nth-of-type(2) {
+  width: 40%;
+  margin-left: -10%;
+  flex-shrink: 0;
+}
+
+#fences {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 27%;
+  z-index: -1;
+  padding-top: 15%;
+}
+
+#fences img {
+  width: 33%;
+}
+#fences img:nth-of-type(1) {
+  width: 33%;
+  padding-top: 7%;
+}
+
+#fences img:nth-of-type(2) {
+  transform: rotateY(180deg);
+}
+
+#section-6 > :first-child > img {
+  width: 83%;
+  padding-top: 36%;
+
+  z-index: -2;
+}
+
+#names {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 20%; */
+
+  margin-top: -5%;
+}
+
+#names .comments {
+  width: 40%;
+  font-size: 2.6vw;
+  font-weight: 700;
+}
+
+#names :first-child {
+  transform: rotate(30deg) skewX(-30deg);
+}

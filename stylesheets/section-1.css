@@ -8,18 +8,43 @@
 }
 
 #headline {
+  display: grid;
   width: 100vw;
-  height: 300px;
   z-index: -2;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
+  margin-top: -2%;
+  margin-bottom: -15%;
 }
 
-h1 {
+#headline h1 {
   color: var(--text-color);
   font-weight: 900;
-  font-size: 230px;
+  font-size: 25vw;
   width: 100%;
+  grid-area: 1/1;
+}
+
+#headline h1:nth-of-type(1) {
+  position: relative;
+
+  animation: headline-animation 12s linear infinite;
+}
+
+#headline h1:nth-of-type(2) {
+  position: relative;
+
+  animation: headline-animation 12s -6s linear infinite;
+}
+
+@keyframes headline-animation {
+  0% {
+    left: 115%;
+  }
+
+  100% {
+    left: -100%;
+  }
 }
 
 .green-panels {
@@ -36,10 +61,18 @@ h1 {
   width: 19%;
 }
 
+#left-panel {
+  width: 19%;
+}
+
+#left-panel img {
+  width: 100%;
+}
+
 #big-beetle {
   width: 83%;
   margin-top: -20%;
-  margin-bottom: -30%;
+  margin-bottom: -33%;
 }
 
 #tools {
@@ -77,7 +110,7 @@ h1 {
 .right {
   width: 50vw;
   font-size: 9vw;
-  font-weight: 600;
+  font-weight: 800;
   overflow: hidden;
   color: var(--text-color);
   white-space: nowrap;
