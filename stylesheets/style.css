@@ -1,9 +1,10 @@
 @import "reset.css";
 @import "layout.css";
-@import "adaptive.css";
 @import "fonts.css";
 @import "section-1.css";
-@import "section-2,3.css";
+@import "section-2.css";
+@import "section-3.css";
 @import "section-4.css";
 @import "section-5.css";
 @import "section-6.css";
+@import "adaptive.css";

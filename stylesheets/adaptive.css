@@ -1,0 +1,153 @@
+@media screen and (max-width: 414px) {
+  #headline h1 {
+    font-size: 35vw;
+  }
+  .section-1 .green-panels > * {
+    width: 40%;
+  }
+  .green-panels {
+    gap: 11%;
+  }
+
+  #tools {
+    width: 100%;
+    justify-content: center;
+    gap: 0%;
+  }
+  #big-beetle {
+    width: 140%;
+    margin-top: -25%;
+    margin-bottom: -53%;
+  }
+
+  #tools img:nth-of-type(1) {
+    width: 49%;
+    padding-top: 10%;
+  }
+  #tools img:nth-of-type(2) {
+    width: 38%;
+    margin-left: -4%;
+  }
+
+  .flags-countdown-container {
+    width: 115%;
+    margin-left: 12%;
+  }
+  .countdown::after {
+    font-size: 14vw;
+  }
+
+  .start {
+    padding-top: 8%;
+  }
+  .fence {
+    /* transform: rotateY(180deg); */
+    padding-top: 5%;
+    padding-left: 0%;
+    margin-left: -5%;
+  }
+
+  .start-cone-flex {
+    flex-direction: column;
+  }
+
+  .section-2 {
+    width: 90vw;
+  }
+
+  .section-3 {
+    width: 97vw;
+    margin-left: 3vw;
+    margin-top: -10%;
+  }
+
+  .start-finish {
+    font-size: 11vw;
+  }
+
+  .section-3 h2 {
+    font-size: 20vw;
+  }
+
+  #section-4 {
+    width: 80vw;
+    margin-left: 20vw;
+    margin-top: -30%;
+  }
+
+  .three-flags-1,
+  .three-flags-2 {
+    width: 120%;
+  }
+
+  .three-flags-1 {
+    top: 25%;
+    left: -28%;
+  }
+
+  .comments {
+    font-size: 3vw;
+  }
+
+  #section-5-wrap {
+    width: 100vw;
+    margin-top: -42%;
+    overflow-x: hidden;
+    z-index: 6;
+  }
+
+  #section-5 {
+    width: 180vw;
+    height: 162vw;
+    margin-top: 0;
+    margin-left: -55%;
+  }
+
+  #section-5-text-container {
+    justify-content: center;
+  }
+
+  #section-5-text-container h2 {
+    padding-top: 2%;
+    padding-left: 15%;
+  }
+
+  /* убрать комментарий Жуки уже на финишной прямой */
+  #section-5-text-container p {
+    display: none;
+  }
+
+  #section-6 {
+    width: 100vw;
+    overflow: hidden;
+    margin-top: -70%;
+  }
+
+  #numbers-trophy-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #numbers-trophy-container img:nth-of-type(1) {
+    padding-left: 4%;
+  }
+
+  #numbers-trophy-container img:nth-of-type(2) {
+    transform: rotateY(180deg);
+    padding-right: 21%;
+    margin-top: -10%;
+  }
+
+  #fences {
+    margin-left: -20%;
+  }
+
+  #section-6 > :first-child {
+    width: 160vw;
+  }
+
+  #section-6 > :first-child > img {
+    margin-left: -30%;
+    /* transform: scale(1.5); */
+  }
+}

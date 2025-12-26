@@ -21,11 +21,11 @@ body {
   /* скрыть скролбар */
 
   /* ОТКРЫТЬ */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /* Фоновое изображение */
-body::before {
+/* body::before {
   content: "";
   background-image: url(../images/maket1.png);
   background-size: contain;
@@ -36,4 +36,4 @@ body::before {
   bottom: 0px;
   opacity: 0.2;
   z-index: -100;
-}
+} */

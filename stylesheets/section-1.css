@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  overflow-x: hidden;
   /* height: 100vh; */
   /* width: 150vh; */
 }
@@ -61,7 +63,7 @@
   width: 19%;
 }
 
-#left-panel {
+.green-panels > :first-child {
   width: 19%;
 }
 

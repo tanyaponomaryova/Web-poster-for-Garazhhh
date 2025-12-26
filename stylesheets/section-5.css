@@ -4,8 +4,8 @@
   width: 100vw;
   height: 90vw;
   position: relative;
-  /* overflow: hidden; */
-  margin-top: -60%;
+  overflow: hidden;
+  margin-top: -45%;
 }
 
 #road-tube-container {
@@ -36,14 +36,24 @@
 }
 
 #section-5-text-container {
+  width: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: absolute;
-  top: 55%;
-  gap: 40%;
+  top: 52%;
+  gap: 36%;
 }
 
+/* надпись ФИНИШ */
+#section-5-text-container h2 {
+  transform-origin: right;
+  padding-top: 3%;
+}
+
+/* жуки уже на финишной прямой */
 #section-5-text-container p {
-  padding-left: 30%;
+  /* padding-left: 30%; */
   /* padding-top: 0%; */
 }
 

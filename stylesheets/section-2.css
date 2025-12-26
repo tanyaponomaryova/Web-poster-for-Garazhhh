@@ -1,0 +1,292 @@
+/* 1 + 2 FLEX */
+.start-cone-flex {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* секция 2 */
+/* СТАРТ */
+.section-2 {
+  width: 50vw;
+  /* height: 65vw; */
+  height: max-content;
+  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  /* align-self: flex-start; */
+
+  background-color: rgba(0, 255, 123, 0.2);
+
+  position: relative;
+
+  z-index: -1;
+
+  /* УБРАТЬ */
+  /* margin-left: 20%; */
+}
+
+.section-2 div:nth-of-type(1) {
+  height: fit-content;
+}
+
+#road-1 {
+  position: absolute;
+  right: 0;
+  z-index: -4;
+  width: 133%;
+}
+
+#gate-1 {
+  width: 25%;
+  padding-left: 7%;
+  padding-top: 10%;
+
+  /* ворота должны быть впереди всего */
+  z-index: 5;
+}
+
+.flags-countdown-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5%;
+  margin-top: -50%;
+  margin-left: 15%;
+}
+
+.flags-countdown-container div:nth-of-type(1) {
+  /* margin-left: 2%; */
+}
+
+/* второй флаг */
+.flags-countdown-container div:nth-of-type(3) {
+  margin-left: -4%;
+  align-self: flex-end;
+}
+
+.flag {
+  background-image: url(../images/section-2/flag.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 6%;
+  aspect-ratio: 40 / 227;
+
+  transform-origin: bottom;
+  animation: flag-wave 1800ms linear infinite;
+}
+
+@keyframes flag-wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.countdown {
+  width: 35%;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+.countdown img {
+  width: 100%;
+}
+
+.countdown::after {
+  font-size: 7vw;
+  color: white;
+  font-weight: 900;
+
+  content: "GO";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-54%, -50%) skewY(30deg) scaleX(0.866);
+
+  animation: countdown-animation 4s linear infinite;
+}
+
+@keyframes countdown-animation {
+  0% {
+    content: "3";
+  }
+  25% {
+    content: "2";
+  }
+  50% {
+    content: "1";
+  }
+  75% {
+    content: "GO";
+  }
+}
+
+/* стиль надписи СТАРТ и ФИНИШ */
+.start-finish {
+  font-family: "Bounded";
+  font-weight: 900;
+  font-size: 6vw;
+  color: var(--text-color);
+  width: fit-content;
+}
+
+.start {
+  transform-origin: right;
+  transform: rotate(30deg) skewX(-30deg);
+  padding-top: 17%;
+  padding-left: 7%;
+}
+
+.fence {
+  /* position: relative; */
+  z-index: -5;
+  width: 40%;
+  padding-left: 65%;
+  margin-top: -12%;
+}
+
+/* ЖУКИ БЕГУТ */
+/* базовые настройки для каждого жука */
+.blue-beetle {
+  background-image: url(../images/section-2/blue-beetle.svg);
+  width: 10%;
+  aspect-ratio: 258 / 252;
+  background-size: auto 100%;
+}
+
+.green-beetle {
+  background-image: url(../images/section-2/green-beetle.svg);
+  width: 15%;
+  aspect-ratio: 346 / 214;
+  background-size: auto 100%;
+}
+
+.pink-beetle {
+  background-image: url(../images/section-2/pink-beetle.svg);
+  width: 10%;
+  aspect-ratio: 257 / 211;
+  background-size: auto 100%;
+}
+
+/* анимация ЛАПОК */
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* бегут до старта и дальше */
+.blue-beetle-section-2-run {
+  position: absolute;
+  margin-left: -12%;
+  margin-top: 10%;
+  z-index: 1;
+
+  animation: movement-bb-2 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+.green-beetle-section-2-run {
+  position: absolute;
+  margin-left: -16%;
+  margin-top: 16%;
+  z-index: 0;
+
+  animation: movement-gb-2 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+.pink-beetle-section-2-run {
+  position: absolute;
+  margin-left: -13%;
+  margin-top: 23%;
+  z-index: 0;
+
+  transform: translate(820%, 570%);
+
+  animation: movement-pb-2 5s linear infinite, run 0.2s steps(2) infinite;
+}
+
+/* ожидание на старте */
+.blue-beetle-section-2-wait {
+  position: absolute;
+  margin-left: 19%;
+  margin-top: 27%;
+  z-index: 1;
+}
+
+.green-beetle-section-2-wait {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 31%;
+  z-index: 0;
+}
+
+.pink-beetle-section-2-wait {
+  position: absolute;
+  margin-left: 8%;
+  margin-top: 35%;
+  z-index: 0;
+}
+
+/* анимация перемещения СИНИЙ 2*/
+@keyframes movement-bb-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  49% {
+    transform: translate(1020%, 600%) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate(1020%, 600%) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(0%, 1200%) rotateY(180deg);
+  }
+}
+
+/* анимация перемещения ЗЕЛЁНЫЙ 2*/
+@keyframes movement-gb-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  49% {
+    transform: translate(620%, 580%) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate(620%, 580%) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(0%, 1160%) rotateY(180deg);
+  }
+}
+
+/* анимация перемещения РОЗОВЫЙ 2*/
+@keyframes movement-pb-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  49% {
+    transform: translate(820%, 570%) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate(820%, 570%) rotateY(180deg);
+  }
+
+  100% {
+    transform: translate(0%, 1140%) rotateY(180deg);
+  }
+}

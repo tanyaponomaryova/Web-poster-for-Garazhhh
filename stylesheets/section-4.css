@@ -42,43 +42,36 @@
   animation: flag-wave 1800ms 1200ms linear infinite;
 }
 
+/* флаги секция 4 */
 .three-flags-1 {
   width: 100%;
   /* background-color: rgba(168, 29, 29, 0.3); */
-  grid-area: 1 / 1;
-  height: fit-content;
-
-  padding-top: 57%;
-  margin-left: -7%;
-}
-
-.three-flags-2 {
-  transform: rotateY(180deg);
+  position: absolute;
+  top: 45%;
+  left: -15%;
 }
 
 .three-flags-2 {
   width: 100%;
-  /* background-color: rgba(168, 29, 29, 0.3); */
-  grid-area: 1 / 1;
-  height: fit-content;
-
-  padding-top: 130%;
-  margin-left: -13%;
+  /* background-color: rgba(113, 31, 255, 0.3); */
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 90%;
+  left: -15%;
+  z-index: 5;
 }
 
 #section-4 .comments {
   position: absolute;
   left: -14%;
-  top: 66%;
-
-  z-index: 4;
+  top: 77%;
 }
 
 .blue-beetle-section-4 {
   /* убрать */
   z-index: 4;
   position: absolute;
-  top: 40%;
+  top: 47%;
   left: 0%;
 
   animation: movement-bb-4 5s linear infinite, run 0.2s steps(2) infinite;
@@ -88,7 +81,7 @@
   /* убрать */
   z-index: 4;
   position: absolute;
-  top: 44%;
+  top: 52%;
   left: -4%;
 
   animation: movement-gb-4 5s linear infinite, run 0.2s steps(2) infinite;
@@ -97,11 +90,9 @@
 .pink-beetle-section-4 {
   /* убрать */
   z-index: 4;
-  top: 47%;
+  top: 55%;
   left: -4%;
   position: absolute;
-
-  /* transform: translate(250%, 420%) rotateY(180deg); */
 
   animation: movement-pb-4 5s linear infinite, run 0.2s steps(2) infinite;
 }

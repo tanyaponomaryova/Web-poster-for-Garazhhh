@@ -1,0 +1,248 @@
+/* секция 3 */
+/* КОНУС */
+
+.section-3 {
+  width: 55vw;
+  /* background-color: rgb(38, 0, 255, 0.3); */
+  position: relative;
+
+  margin-left: -5vw;
+
+  margin-right: 20%;
+}
+
+/* надпись ГОНКА */
+.section-3 h2 {
+  font-size: 12vw;
+  font-weight: 800;
+  color: var(--text-color);
+  transform: skewY(-30deg) scaleX(0.866);
+
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+/* обе картинки в одной клетке грида */
+.road-cone-container img {
+  width: 133%;
+  grid-area: 1 / 1;
+}
+
+.road-cone-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  /* background-color: rgba(255, 255, 0, 0.2); */
+
+  /* ВКЛЮЧИТЬ */
+  /* overflow: hidden; */
+
+  margin-top: -47%;
+}
+
+/* стиль надписей-комментариев */
+.comments {
+  font-size: 1.7vw;
+  line-height: normal;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: center;
+  white-space: nowrap;
+  transform: rotate(-30deg) skewX(30deg);
+}
+
+/* надпись ОБОГНУТЬ ПРЕПЯТСТВИЕ */
+.section-3 p {
+  position: absolute;
+  top: 39%;
+  left: 64%;
+}
+
+/* ЖУКИ СЕКЦИЯ 3 */
+.blue-beetle-section-3-forward {
+  position: absolute;
+  /* width: 10%; */
+
+  top: 13%;
+  left: 105%;
+  transform: rotateY(180deg);
+
+  z-index: 3;
+
+  animation: movement-bb-3 5s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 5s linear infinite;
+}
+
+.blue-beetle-section-3-backward {
+  position: absolute;
+  /* width: 10%; */
+
+  top: 13%;
+  left: 105%;
+  transform: rotateY(180deg);
+
+  animation: movement-bb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 5s linear infinite;
+}
+
+.green-beetle-section-3-forward {
+  position: absolute;
+  /* width: 15%; */
+
+  top: 11%;
+  left: 100%;
+  transform: rotateY(180deg);
+
+  z-index: 2;
+
+  animation: movement-gb-3 5s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 5s linear infinite;
+}
+
+.green-beetle-section-3-backward {
+  position: absolute;
+  /* width: 15%; */
+
+  top: 11%;
+  left: 100%;
+  transform: rotateY(180deg);
+  animation: movement-gb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 5s linear infinite;
+}
+
+.pink-beetle-section-3-forward {
+  position: absolute;
+  /* width: 10%; */
+
+  top: 9%;
+  left: 100%;
+  transform: rotateY(180deg);
+
+  transform: translate(-570%, 1010%);
+
+  z-index: 1;
+
+  animation: movement-pb-3 5s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 5s linear infinite;
+}
+
+.pink-beetle-section-3-backward {
+  position: absolute;
+  /* width: 10%; */
+
+  top: 9%;
+  left: 100%;
+  transform: rotateY(180deg);
+
+  animation: movement-pb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 5s linear infinite;
+}
+
+/* анимация перемещения СИНИЙ 3*/
+@keyframes movement-bb-3 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  39.9% {
+    transform: translate(-850%, 510%) rotateY(180deg);
+    z-index: 3;
+  }
+
+  40% {
+    transform: translate(-850%, 510%) rotateY(0deg);
+    z-index: 1;
+  }
+
+  60% {
+    transform: translate(-600%, 660%) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate(0%, 310%) rotateY(0deg);
+  }
+}
+
+/* анимация перемещения ЗЕЛЁНЫЙ 3*/
+@keyframes movement-gb-3 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  39.9% {
+    transform: translate(-615%, 580%) rotateY(180deg);
+  }
+
+  40% {
+    transform: translate(-615%, 580%) rotateY(0deg);
+  }
+
+  60% {
+    transform: translate(-390%, 800%) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate(0%, 440%) rotateY(0deg);
+  }
+}
+
+/* анимация перемещения РОЗОВЫЙ 3*/
+@keyframes movement-pb-3 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  39.9% {
+    transform: translate(-1000%, 700%) rotateY(180deg);
+    z-index: 1;
+  }
+
+  40% {
+    transform: translate(-1000%, 700%) rotateY(0deg);
+    z-index: 3;
+  }
+
+  60% {
+    transform: translate(-570%, 1010%) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate(0%, 630%) rotateY(0deg);
+  }
+}
+
+@keyframes back-run {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes make-transparent {
+  0% {
+    opacity: 100%;
+  }
+  59.9% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes make-visible {
+  0% {
+    opacity: 0%;
+  }
+  59.9% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

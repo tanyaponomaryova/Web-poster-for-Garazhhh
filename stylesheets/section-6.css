@@ -57,6 +57,7 @@
   transform: rotateY(180deg);
 }
 
+/* плитка */
 #section-6 > :first-child > img {
   width: 83%;
   padding-top: 36%;
@@ -64,20 +65,58 @@
   z-index: -2;
 }
 
-#names {
+/* бегущая строка с именем */
+.running-line-2 {
   display: flex;
-  justify-content: space-around;
-  /* gap: 20%; */
-
-  margin-top: -5%;
+  padding-top: 15%;
 }
 
-#names .comments {
-  width: 40%;
-  font-size: 2.6vw;
-  font-weight: 700;
+.left-2,
+.right-2 {
+  width: 50vw;
+  font-size: 9vw;
+  font-weight: 800;
+  overflow: hidden;
+  color: var(--text-color);
+  white-space: nowrap;
 }
 
-#names :first-child {
-  transform: rotate(30deg) skewX(-30deg);
+.left-2 {
+  transform-origin: right;
+  transform: skewY(30deg);
+}
+
+.right-2 {
+  transform-origin: left;
+  transform: skewY(-30deg);
+}
+
+.left-2 span {
+  position: relative;
+  animation: running-line-left-2 12s linear infinite;
+}
+
+.right-2 span {
+  position: relative;
+  animation: running-line-right-2 12s linear infinite;
+}
+
+@keyframes running-line-left-2 {
+  0% {
+    margin-left: 200%;
+  }
+
+  100% {
+    margin-left: -800%;
+  }
+}
+
+@keyframes running-line-right-2 {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: -900%;
+  }
 }
