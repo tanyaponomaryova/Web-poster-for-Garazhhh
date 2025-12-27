@@ -1,3 +1,34 @@
+@media screen and (max-width: 768px) {
+  #headline h1 {
+    font-size: 35vw;
+  }
+  .section-1 .green-panels > * {
+    width: 28%;
+  }
+  .green-panels {
+    gap: 23%;
+  }
+
+  #tools {
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+    margin-top: -50%;
+  }
+  #big-beetle {
+    width: 123%;
+  }
+
+  #tools img:nth-of-type(1) {
+    width: 42%;
+    padding-top: 10%;
+  }
+  #tools img:nth-of-type(2) {
+    width: 30%;
+    margin-left: -4%;
+  }
+}
+
 @media screen and (max-width: 414px) {
   #headline h1 {
     font-size: 35vw;
@@ -13,11 +44,12 @@
     width: 100%;
     justify-content: center;
     gap: 0%;
+    margin-top: -50%;
   }
   #big-beetle {
     width: 140%;
     margin-top: -25%;
-    margin-bottom: -53%;
+    /* margin-bottom: -53%; */
   }
 
   #tools img:nth-of-type(1) {
@@ -29,17 +61,18 @@
     margin-left: -4%;
   }
 
-  .flags-countdown-container {
-    width: 115%;
-    margin-left: 12%;
-  }
-  .countdown::after {
-    font-size: 14vw;
+  .running-line {
+    margin-bottom: 0%;
   }
 
-  .start {
-    padding-top: 8%;
+  /* 2 раздел */
+  .flags-countdown-container {
+    margin-left: 40%;
   }
+  .countdown::after {
+    font-size: 12vw;
+  }
+
   .fence {
     /* transform: rotateY(180deg); */
     padding-top: 5%;
@@ -75,14 +108,17 @@
     margin-top: -30%;
   }
 
-  .three-flags-1,
-  .three-flags-2 {
-    width: 120%;
+  .three-flags {
+    width: 35%;
   }
 
   .three-flags-1 {
-    top: 25%;
-    left: -28%;
+    top: 20%;
+  }
+
+  .three-flags-2 {
+    top: 80%;
+    margin-left: -5%;
   }
 
   .comments {
@@ -112,7 +148,8 @@
     padding-left: 15%;
   }
 
-  /* убрать комментарий Жуки уже на финишной прямой */
+  /* убрать комментарий Жуки уже на финишной прямой и флаги*/
+  #two-flags,
   #section-5-text-container p {
     display: none;
   }
@@ -128,14 +165,17 @@
     align-items: flex-start;
   }
 
-  #numbers-trophy-container img:nth-of-type(1) {
+  #numbers-trophy-container > :first-child {
     padding-left: 4%;
   }
-
-  #numbers-trophy-container img:nth-of-type(2) {
+  #trophy {
     transform: rotateY(180deg);
-    padding-right: 21%;
-    margin-top: -10%;
+    margin-left: 10%;
+    margin-top: -21%;
+  }
+  #trophy p {
+    font-size: 2.1vw;
+    transform: skewY(30deg) scaleX(0.86) rotateY(180deg);
   }
 
   #fences {

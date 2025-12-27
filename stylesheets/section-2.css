@@ -2,6 +2,7 @@
 .start-cone-flex {
   display: flex;
   align-items: flex-start;
+  /* overflow: hidden; */
 }
 
 /* секция 2 */
@@ -9,16 +10,14 @@
 .section-2 {
   width: 50vw;
   /* height: 65vw; */
-  height: max-content;
+  /* height: max-content; */
   flex-shrink: 0;
   /* flex-shrink: 0; */
   /* align-self: flex-start; */
 
-  background-color: rgba(0, 255, 123, 0.2);
-
   position: relative;
 
-  z-index: -1;
+  /* z-index: -1; */
 
   /* УБРАТЬ */
   /* margin-left: 20%; */
@@ -41,25 +40,26 @@
   padding-top: 10%;
 
   /* ворота должны быть впереди всего */
-  z-index: 5;
+  position: relative;
+  z-index: 20;
 }
 
 .flags-countdown-container {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  width: 60%;
   gap: 5%;
-  margin-top: -50%;
-  margin-left: 15%;
+  margin-top: -43%;
+  margin-left: 36%;
 }
 
 .flags-countdown-container div:nth-of-type(1) {
-  /* margin-left: 2%; */
+  width: 10%;
 }
 
 /* второй флаг */
 .flags-countdown-container div:nth-of-type(3) {
-  margin-left: -4%;
+  width: 10%;
+  /* margin-left: -4%; */
   align-self: flex-end;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .countdown {
-  width: 35%;
+  width: 60%;
   position: relative;
   margin-top: 2%;
   margin-bottom: 10%;
@@ -109,20 +109,23 @@
   left: 50%;
   transform: translate(-54%, -50%) skewY(30deg) scaleX(0.866);
 
-  animation: countdown-animation 4s linear infinite;
+  animation: countdown-animation 30s linear infinite;
 }
 
 @keyframes countdown-animation {
   0% {
-    content: "3";
+    content: "";
   }
-  25% {
-    content: "2";
-  }
-  50% {
+  4.5% {
     content: "1";
   }
-  75% {
+  8.3% {
+    content: "2";
+  }
+  12.1% {
+    content: "3";
+  }
+  16% {
     content: "GO";
   }
 }
@@ -139,7 +142,7 @@
 .start {
   transform-origin: right;
   transform: rotate(30deg) skewX(-30deg);
-  padding-top: 17%;
+  padding-top: 14%;
   padding-left: 7%;
 }
 
@@ -191,7 +194,8 @@
   margin-top: 10%;
   z-index: 1;
 
-  animation: movement-bb-2 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-bb-2 30s linear infinite,
+    run-transparent 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 .green-beetle-section-2-run {
@@ -200,7 +204,8 @@
   margin-top: 16%;
   z-index: 0;
 
-  animation: movement-gb-2 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-gb-2 30s linear infinite,
+    run-transparent 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 .pink-beetle-section-2-run {
@@ -209,31 +214,36 @@
   margin-top: 23%;
   z-index: 0;
 
-  transform: translate(820%, 570%);
-
-  animation: movement-pb-2 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-pb-2 30s linear infinite,
+    run-transparent 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 /* ожидание на старте */
 .blue-beetle-section-2-wait {
   position: absolute;
-  margin-left: 19%;
-  margin-top: 27%;
+  margin-left: -12%;
+  margin-top: 10%;
   z-index: 1;
+  animation: movement-bb-2 30s linear infinite,
+    wait-transparent 30s linear infinite, run 0.6s steps(2) infinite;
 }
 
 .green-beetle-section-2-wait {
   position: absolute;
-  margin-left: 10%;
-  margin-top: 31%;
+  margin-left: -16%;
+  margin-top: 16%;
   z-index: 0;
+  animation: movement-gb-2 30s linear infinite,
+    wait-transparent 30s linear infinite, run 0.6s steps(2) infinite;
 }
 
 .pink-beetle-section-2-wait {
   position: absolute;
-  margin-left: 8%;
-  margin-top: 35%;
+  margin-left: -13%;
+  margin-top: 23%;
   z-index: 0;
+  animation: movement-pb-2 30s linear infinite,
+    wait-transparent 30s linear infinite, run 0.6s steps(2) infinite;
 }
 
 /* анимация перемещения СИНИЙ 2*/
@@ -242,15 +252,25 @@
     transform: translate(0, 0);
   }
 
-  49% {
-    transform: translate(1020%, 600%) rotateY(0deg);
+  /* стартовая позиция */
+  4% {
+    transform: translate(310%, 180%);
   }
 
-  50% {
+  /* начало бега */
+  16% {
+    transform: translate(310%, 180%);
+  }
+
+  25% {
+    transform: translate(1020%, 600%);
+  }
+
+  25.1% {
     transform: translate(1020%, 600%) rotateY(180deg);
   }
 
-  100% {
+  36.5% {
     transform: translate(0%, 1200%) rotateY(180deg);
   }
 }
@@ -260,15 +280,25 @@
   0% {
     transform: translate(0, 0);
   }
-  49% {
+
+  /* стартовая позиция */
+  4% {
+    transform: translate(170%, 160%);
+  }
+  /* начало бега */
+  16% {
+    transform: translate(170%, 160%);
+  }
+
+  25% {
     transform: translate(620%, 580%) rotateY(0deg);
   }
 
-  50% {
+  25.1% {
     transform: translate(620%, 580%) rotateY(180deg);
   }
 
-  100% {
+  36.5% {
     transform: translate(0%, 1160%) rotateY(180deg);
   }
 }
@@ -278,15 +308,64 @@
   0% {
     transform: translate(0, 0);
   }
-  49% {
+
+  /* стартовая позиция */
+  4% {
+    transform: translate(210%, 150%);
+  }
+
+  /* начало бега */
+  16% {
+    transform: translate(210%, 150%);
+  }
+
+  25% {
     transform: translate(820%, 570%) rotateY(0deg);
   }
 
-  50% {
+  25.1% {
     transform: translate(820%, 570%) rotateY(180deg);
   }
 
-  100% {
+  36.5% {
     transform: translate(0%, 1140%) rotateY(180deg);
+  }
+}
+
+@keyframes run-transparent {
+  0% {
+    opacity: 100%;
+  }
+  /* на время ожидания прозрачный */
+  4.5% {
+    opacity: 100%;
+  }
+  4.6% {
+    opacity: 0%;
+  }
+  15.9% {
+    opacity: 0%;
+  }
+  16% {
+    opacity: 100%;
+  }
+}
+
+@keyframes wait-transparent {
+  0% {
+    opacity: 0%;
+  }
+  4.4% {
+    opacity: 0%;
+  }
+  /* на время ожидания прозрачный */
+  4.5% {
+    opacity: 100%;
+  }
+  16% {
+    opacity: 100%;
+  }
+  16.1% {
+    opacity: 0%;
   }
 }

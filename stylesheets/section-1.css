@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
 
-  overflow-x: hidden;
+  overflow: hidden;
   /* height: 100vh; */
   /* width: 150vh; */
 }
@@ -71,16 +71,134 @@
   width: 100%;
 }
 
+#left-panel {
+  position: relative;
+}
+
+#left-panel::after {
+  content: "";
+  background-image: url(../images/section-1/slides.svg);
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 129/185;
+  top: 0;
+  left: 0;
+
+  background-size: 100% auto;
+  animation: slides 10s linear infinite;
+}
+
+@keyframes slides {
+  0% {
+    opacity: 0;
+    background-position: 0 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+    background-position: 0 0;
+  }
+  33.1% {
+    opacity: 0;
+    background-position: 0 172%;
+  }
+  38% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+    background-position: 0 172%;
+  }
+  66.1% {
+    opacity: 0;
+    background-position: 0 206%;
+  }
+  71% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 0 206%;
+  }
+}
+
 #big-beetle {
   width: 83%;
   margin-top: -20%;
-  margin-bottom: -33%;
+  position: relative;
+  /* margin-bottom: -33%; */
+}
+
+#big-beetle img {
+  width: 100%;
+}
+
+#big-beetle #star-1 {
+  background-image: url(../images/star.svg);
+  width: 5%;
+  aspect-ratio: 1 / 1;
+  background-size: auto 100%;
+  position: absolute;
+  top: 26.7%;
+  left: 60%;
+
+  animation: star-animation 2.5s ease-in-out infinite;
+}
+
+#big-beetle #star-2 {
+  background-image: url(../images/star.svg);
+  width: 7%;
+  aspect-ratio: 1 / 1;
+  background-size: auto 100%;
+  position: absolute;
+  top: 7%;
+  left: 37%;
+
+  animation: star-animation 2.5s -0.5s ease-in-out infinite;
+}
+
+#big-beetle #star-3 {
+  background-image: url(../images/star.svg);
+  width: 5%;
+  aspect-ratio: 1 / 1;
+  background-size: auto 100%;
+  position: absolute;
+  top: 3%;
+  left: 43%;
+
+  animation: star-animation 2s -1s ease-in-out infinite;
+}
+
+@keyframes star-animation {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
 
 #tools {
   display: flex;
   justify-content: space-between;
   width: 64%;
+  margin-top: -32%;
+  padding-bottom: 10%;
 }
 
 #tools img:nth-of-type(1) {
@@ -90,22 +208,23 @@
 
 #tools img:nth-of-type(2) {
   width: 32%;
-  animation: up-and-down 4s ease-in-out alternate infinite;
+  animation: up-and-down 4s -1s ease-in-out alternate infinite;
 }
 
 @keyframes up-and-down {
   0% {
-    transform: translateY(0%);
+    transform: translateY(-5%);
   }
   100% {
-    transform: translateY(5%);
+    transform: translateY(10%);
   }
 }
 
 /* бегущая строка "автосервис для жуков" */
-.container {
+.running-line {
   display: flex;
-  padding-top: 15%;
+  padding-top: 4%;
+  margin-bottom: -12%;
 }
 
 .left,

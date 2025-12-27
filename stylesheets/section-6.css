@@ -1,10 +1,8 @@
 #section-6 {
   width: 90vw;
-  /* height: 100vw; */
   position: relative;
-  /* overflow: hidden; */
-
   margin-top: -35%;
+  margin-bottom: 5%;
 }
 
 #section-6 > :first-child {
@@ -24,16 +22,57 @@
 }
 
 /* цифры */
-#numbers-trophy-container img:nth-of-type(1) {
+#numbers-trophy-container > :first-child {
   width: 54%;
   padding-top: 10%;
 }
 
 /* кубок */
-#numbers-trophy-container img:nth-of-type(2) {
+#trophy {
   width: 40%;
   margin-left: -10%;
   flex-shrink: 0;
+  position: relative;
+}
+
+#trophy img {
+  width: 100%;
+}
+
+#trophy p {
+  font-size: 1.2vw;
+  color: #babcbe;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  position: absolute;
+  transform: skewY(30deg) scaleX(0.86);
+  bottom: 14%;
+  left: 3%;
+}
+
+#star-4 {
+  background-image: url(../images/star.svg);
+  width: 15%;
+  aspect-ratio: 1 / 1;
+  background-size: auto 100%;
+  position: absolute;
+  top: 27%;
+  left: 60%;
+
+  animation: star-animation 2.5s ease-in-out infinite;
+}
+
+#star-5 {
+  background-image: url(../images/star.svg);
+  width: 7%;
+  aspect-ratio: 1 / 1;
+  background-size: auto 100%;
+  position: absolute;
+  top: 3%;
+  left: 40%;
+
+  animation: star-animation 2.5s ease-in-out infinite;
 }
 
 #fences {
@@ -68,7 +107,7 @@
 /* бегущая строка с именем */
 .running-line-2 {
   display: flex;
-  padding-top: 15%;
+  padding-bottom: 5%;
 }
 
 .left-2,

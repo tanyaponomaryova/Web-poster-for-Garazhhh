@@ -9,6 +9,7 @@
 
 #tube-1-container {
   display: grid;
+  margin-bottom: -7%;
 }
 
 /* положение трубы */
@@ -24,40 +25,42 @@
 
 /* базовые настройки для 3 флагов */
 .three-flags {
+  width: 26%;
   display: flex;
-  justify-content: end;
   align-items: flex-start;
-  gap: 4%;
+  gap: 15%;
+}
+
+.three-flags .flag {
+  width: 30%;
 }
 
 .three-flags div:nth-of-type(2) {
-  margin-top: 6%;
+  margin-top: 21%;
 
   animation: flag-wave 1800ms 600ms linear infinite;
 }
 
 .three-flags div:nth-of-type(3) {
-  margin-top: 12%;
+  margin-top: 42%;
 
   animation: flag-wave 1800ms 1200ms linear infinite;
 }
 
 /* флаги секция 4 */
 .three-flags-1 {
-  width: 100%;
   /* background-color: rgba(168, 29, 29, 0.3); */
   position: absolute;
   top: 45%;
-  left: -15%;
+  left: 60%;
 }
 
 .three-flags-2 {
-  width: 100%;
   /* background-color: rgba(113, 31, 255, 0.3); */
   transform: rotateY(180deg);
   position: absolute;
   top: 90%;
-  left: -15%;
+  left: -10%;
   z-index: 5;
 }
 
@@ -68,54 +71,59 @@
 }
 
 .blue-beetle-section-4 {
-  /* убрать */
-  z-index: 4;
   position: absolute;
   top: 47%;
   left: 0%;
 
-  animation: movement-bb-4 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-bb-4 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 .green-beetle-section-4 {
-  /* убрать */
-  z-index: 4;
   position: absolute;
   top: 52%;
   left: -4%;
 
-  animation: movement-gb-4 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-gb-4 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 .pink-beetle-section-4 {
-  /* убрать */
-  z-index: 4;
   top: 55%;
   left: -4%;
   position: absolute;
 
-  animation: movement-pb-4 5s linear infinite, run 0.2s steps(2) infinite;
+  animation: movement-pb-4 30s linear infinite, run 0.2s steps(2) infinite;
 }
 
 /* анимация перемещения СИНИЙ 4*/
 @keyframes movement-bb-4 {
+  /* на месте */
   0% {
     transform: translate(0, 0) rotateY(0deg);
   }
-  59.9% {
+
+  61.5% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+
+  70.5% {
     transform: translate(600%, 360%) rotateY(0deg);
   }
 
-  60% {
+  70.6% {
     transform: translate(600%, 360%) rotateY(180deg);
+    z-index: 3;
   }
 
-  79.9% {
+  73.5% {
     transform: translate(330%, 520%) rotateY(180deg);
   }
 
-  80% {
+  73.6% {
     transform: translate(330%, 520%) rotateY(180deg) rotateZ(15deg);
+  }
+
+  76.5% {
+    transform: translate(160%, 730%) rotateY(180deg) rotateZ(15deg);
   }
 
   100% {
@@ -128,20 +136,28 @@
   0% {
     transform: translate(0, 0) rotateY(0deg);
   }
-  59.9% {
+  61.5% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+
+  70.5% {
     transform: translate(340%, 320%) rotateY(0deg);
   }
 
-  60% {
+  70.6% {
     transform: translate(310%, 340%) rotateY(180deg);
   }
 
-  79.9% {
+  73.5% {
     transform: translate(190%, 450%) rotateY(180deg);
   }
 
-  80% {
+  73.6% {
     transform: translate(190%, 450%) rotateY(180deg) rotateZ(15deg);
+  }
+
+  76.5% {
+    transform: translate(50%, 700%) rotateY(180deg) rotateZ(15deg);
   }
 
   100% {
@@ -154,20 +170,29 @@
   0% {
     transform: translate(0, 0) rotateY(0deg);
   }
-  59.9% {
+
+  61.5% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
+
+  70.5% {
     transform: translate(410%, 300%) rotateY(0deg);
   }
 
-  60% {
+  70.6% {
     transform: translate(410%, 300%) rotateY(180deg);
   }
 
-  79.9% {
+  73.5% {
     transform: translate(250%, 420%) rotateY(180deg);
   }
 
-  80% {
+  73.6% {
     transform: translate(250%, 420%) rotateY(180deg) rotateZ(15deg);
+  }
+
+  76.5% {
+    transform: translate(40%, 700%) rotateY(180deg) rotateZ(15deg);
   }
 
   100% {

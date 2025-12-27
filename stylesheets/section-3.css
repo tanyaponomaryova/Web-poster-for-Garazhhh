@@ -8,7 +8,8 @@
 
   margin-left: -5vw;
 
-  margin-right: 20%;
+  /* margin-right: 20%; */
+  /* overflow: hidden; */
 }
 
 /* надпись ГОНКА */
@@ -22,20 +23,25 @@
   padding-bottom: 3%;
 }
 
-/* обе картинки в одной клетке грида */
+/* три картинки в одной клетке грида */
 .road-cone-container img {
   width: 133%;
   grid-area: 1 / 1;
+}
+
+/* верхушка конуса поверх всего*/
+.road-cone-container img:nth-of-type(3) {
+  width: 133%;
+  grid-area: 1 / 1;
+  z-index: 10;
 }
 
 .road-cone-container {
   position: relative;
   width: 100%;
   display: grid;
-  /* background-color: rgba(255, 255, 0, 0.2); */
 
-  /* ВКЛЮЧИТЬ */
-  /* overflow: hidden; */
+  overflow: hidden;
 
   margin-top: -47%;
 }
@@ -69,8 +75,8 @@
 
   z-index: 3;
 
-  animation: movement-bb-3 5s linear infinite, run 0.2s steps(2) infinite,
-    make-transparent 5s linear infinite;
+  animation: movement-bb-3 30s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 30s linear infinite;
 }
 
 .blue-beetle-section-3-backward {
@@ -81,8 +87,8 @@
   left: 105%;
   transform: rotateY(180deg);
 
-  animation: movement-bb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
-    make-visible 5s linear infinite;
+  animation: movement-bb-3 30s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 30s linear infinite;
 }
 
 .green-beetle-section-3-forward {
@@ -95,8 +101,8 @@
 
   z-index: 2;
 
-  animation: movement-gb-3 5s linear infinite, run 0.2s steps(2) infinite,
-    make-transparent 5s linear infinite;
+  animation: movement-gb-3 30s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 30s linear infinite;
 }
 
 .green-beetle-section-3-backward {
@@ -106,8 +112,10 @@
   top: 11%;
   left: 100%;
   transform: rotateY(180deg);
-  animation: movement-gb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
-    make-visible 5s linear infinite;
+  animation: movement-gb-3 30s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 30s linear infinite;
+
+  z-index: 2;
 }
 
 .pink-beetle-section-3-forward {
@@ -122,8 +130,8 @@
 
   z-index: 1;
 
-  animation: movement-pb-3 5s linear infinite, run 0.2s steps(2) infinite,
-    make-transparent 5s linear infinite;
+  animation: movement-pb-3 30s linear infinite, run 0.2s steps(2) infinite,
+    make-transparent 30s linear infinite;
 }
 
 .pink-beetle-section-3-backward {
@@ -134,30 +142,36 @@
   left: 100%;
   transform: rotateY(180deg);
 
-  animation: movement-pb-3 5s linear infinite, back-run 0.2s steps(2) infinite,
-    make-visible 5s linear infinite;
+  animation: movement-pb-3 30s linear infinite, back-run 0.2s steps(2) infinite,
+    make-visible 30s linear infinite;
 }
 
 /* анимация перемещения СИНИЙ 3*/
 @keyframes movement-bb-3 {
+  /* стоит на месте */
   0% {
     transform: translate(0, 0) rotateY(180deg);
   }
-  39.9% {
+
+  36.5% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+
+  48% {
     transform: translate(-850%, 510%) rotateY(180deg);
     z-index: 3;
   }
 
-  40% {
+  48.1% {
     transform: translate(-850%, 510%) rotateY(0deg);
     z-index: 1;
   }
 
-  60% {
+  52.5% {
     transform: translate(-600%, 660%) rotateY(0deg);
   }
 
-  100% {
+  61.5% {
     transform: translate(0%, 310%) rotateY(0deg);
   }
 }
@@ -167,19 +181,23 @@
   0% {
     transform: translate(0, 0) rotateY(180deg);
   }
-  39.9% {
+  36.5% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+
+  48% {
     transform: translate(-615%, 580%) rotateY(180deg);
   }
 
-  40% {
+  48.1% {
     transform: translate(-615%, 580%) rotateY(0deg);
   }
 
-  60% {
+  52.5% {
     transform: translate(-390%, 800%) rotateY(0deg);
   }
 
-  100% {
+  61.5% {
     transform: translate(0%, 440%) rotateY(0deg);
   }
 }
@@ -189,21 +207,24 @@
   0% {
     transform: translate(0, 0) rotateY(180deg);
   }
-  39.9% {
+  36.5% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
+  48% {
     transform: translate(-1000%, 700%) rotateY(180deg);
     z-index: 1;
   }
 
-  40% {
+  48.1% {
     transform: translate(-1000%, 700%) rotateY(0deg);
     z-index: 3;
   }
 
-  60% {
+  52.5% {
     transform: translate(-570%, 1010%) rotateY(0deg);
   }
 
-  100% {
+  61.5% {
     transform: translate(0%, 630%) rotateY(0deg);
   }
 }
@@ -217,14 +238,15 @@
   }
 }
 
+/* перед */
 @keyframes make-transparent {
   0% {
     opacity: 100%;
   }
-  59.9% {
+  52.5% {
     opacity: 100%;
   }
-  60% {
+  52.6% {
     opacity: 0%;
   }
   100% {
@@ -236,10 +258,10 @@
   0% {
     opacity: 0%;
   }
-  59.9% {
+  52.5% {
     opacity: 0%;
   }
-  60% {
+  52.6% {
     opacity: 100%;
   }
   100% {
