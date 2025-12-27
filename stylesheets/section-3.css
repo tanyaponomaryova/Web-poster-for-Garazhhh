@@ -1,15 +1,9 @@
 /* секция 3 */
 /* КОНУС */
-
 .section-3 {
   width: 55vw;
-  /* background-color: rgb(38, 0, 255, 0.3); */
   position: relative;
-
   margin-left: -5vw;
-
-  /* margin-right: 20%; */
-  /* overflow: hidden; */
 }
 
 /* надпись ГОНКА */
@@ -67,8 +61,6 @@
 /* ЖУКИ СЕКЦИЯ 3 */
 .blue-beetle-section-3-forward {
   position: absolute;
-  /* width: 10%; */
-
   top: 13%;
   left: 105%;
   transform: rotateY(180deg);
@@ -81,8 +73,6 @@
 
 .blue-beetle-section-3-backward {
   position: absolute;
-  /* width: 10%; */
-
   top: 13%;
   left: 105%;
   transform: rotateY(180deg);
@@ -93,7 +83,6 @@
 
 .green-beetle-section-3-forward {
   position: absolute;
-  /* width: 15%; */
 
   top: 11%;
   left: 100%;
@@ -107,7 +96,6 @@
 
 .green-beetle-section-3-backward {
   position: absolute;
-  /* width: 15%; */
 
   top: 11%;
   left: 100%;
@@ -120,7 +108,6 @@
 
 .pink-beetle-section-3-forward {
   position: absolute;
-  /* width: 10%; */
 
   top: 9%;
   left: 100%;
@@ -136,7 +123,6 @@
 
 .pink-beetle-section-3-backward {
   position: absolute;
-  /* width: 10%; */
 
   top: 9%;
   left: 100%;
